@@ -46,6 +46,10 @@ export class ConvertComponent {
   changeCurrencyAmount() {
     return this.currencyAmountTo = this.currencyAmountFrom * this._currencyRate;
   }
+
+  changeCurrencyAmountReversed() {
+    return this.currencyAmountFrom = this.currencyAmountTo * this._currencyRate;
+  }
   
 
   changeCurrency(): void {

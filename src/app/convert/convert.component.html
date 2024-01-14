@@ -1,7 +1,7 @@
 <div class="form-container">
   <mat-card class="conversion-card">
     <mat-form-field>
-      <mat-label>Select source currency:</mat-label>
+      <mat-label>Select desired currency:</mat-label>
       <mat-select [(ngModel)]="currencyFrom" (ngModelChange)="changeCurrency()">
         <mat-option *ngFor="let currency of currencies" [value]="currency">
           {{ currency }}
@@ -10,8 +10,10 @@
     </mat-form-field>
 
     <mat-form-field>
-      <mat-label>Amount in {{ currencyFrom }}:</mat-label>
-      <input matInput type="number" [(ngModel)]="currencyAmountFrom" (ngModelChange)="changeCurrencyAmount()" />
+      <mat-label>Provide a value:</mat-label>
+      <input matInput type="number"
+      [(ngModel)]="currencyAmountFrom"
+      (ngModelChange)="changeCurrencyAmount()"/>
     </mat-form-field>
   </mat-card>
 
@@ -19,7 +21,7 @@
 
   <mat-card class="conversion-card">
     <mat-form-field>
-      <mat-label>Select target currency:</mat-label>
+      <mat-label>Select desired currency:</mat-label>
       <mat-select [(ngModel)]="currencyTo" (ngModelChange)="changeCurrency()">
         <mat-option *ngFor="let currency of currencies" [value]="currency">
           {{ currency }}
@@ -28,8 +30,10 @@
     </mat-form-field>
 
     <mat-form-field>
-      <mat-label>Amount in {{ currencyTo }}:</mat-label>
-      <input matInput type="number" placeholder="Provide a value" [(ngModel)]="currencyAmountTo" (ngModelChange)="changeCurrencyAmount()" />
+      <mat-label>Provide a value:</mat-label>
+      <input matInput type="number"
+      [(ngModel)]="currencyAmountTo"
+      (ngModelChange)="changeCurrencyAmountReversed()"/>
     </mat-form-field>
-  </mat-card>
+</mat-card>
 </div>

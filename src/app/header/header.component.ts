@@ -4,8 +4,9 @@ import { MatDividerModule } from "@angular/material/divider";
 
 import { ExchangeService } from "../core/services/exchange.service";
 import { Observable, Subscription } from "rxjs";
-import { Currencies } from "../models/currencies.model";
+
 import { CommonModule } from "@angular/common";
+import { Currencies } from "../core/models/currencies.model";
 
 
 @Component({
