@@ -1,0 +1,46 @@
+.mat-toolbar {
+  background-color: #2196F3;
+  min-height: 64px; 
+  height: auto; 
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-size: 1.5rem;
+  color: white;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.exchange-info {
+  display: flex;
+  align-items: center;
+  color: white;
+  margin-right: 20px;
+}
+
+.currency-label {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.currency-rate {
+  font-size: 1rem;
+}
+
+
+@media (max-width: 600px) {
+  .mat-toolbar {
+    flex-direction: column; 
+    min-height: auto; 
+  }
+
+  .exchange-info {
+    margin-top: 10px; 
+  }
+}

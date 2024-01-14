@@ -1,0 +1,32 @@
+:host {
+  display: flex;
+  justify-content: center;
+}
+
+.form-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.conversion-card {
+  width: 300px;
+  margin: 10px;
+  flex: 1;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+button {
+  margin-top: 20px;
+}
+
+
+@media (max-width: 600px) {
+  .conversion-card {
+    flex: 100%;
+  }
+}

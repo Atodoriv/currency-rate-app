@@ -1,0 +1,26 @@
+<mat-toolbar color="primary">
+    <span class="title">
+        CurrencyRateApp
+    </span>
+    <span class="spacer"></span>
+
+  
+    <div *ngIf="currenciesUsdToUah" class="exchange-info">
+        <span class="currency-label">
+            USD/UAH:
+        </span>
+        <span class="currency-rate">
+            1/{{ (currenciesUsdToUah | async)?.rate }}
+        </span>
+    </div>
+
+
+    <div *ngIf="currenciesEurToUah" class="exchange-info">
+        <span class="currency-label">
+            EUR/UAH:
+        </span>
+        <span class="currency-rate">
+            1/{{ (currenciesEurToUah | async)?.rate }}
+        </span>
+    </div>
+</mat-toolbar>
