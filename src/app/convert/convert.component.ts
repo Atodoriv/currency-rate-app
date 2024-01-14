@@ -43,12 +43,14 @@ export class ConvertComponent {
 
   constructor(private exchangeService: ExchangeService) { }
 
-  changeCurrencyAmount() {
-    return this.currencyAmountTo = this.currencyAmountFrom * this._currencyRate;
+  changeCurrencyAmount() : void{
+    this.currencyAmountTo = this.currencyAmountFrom * this._currencyRate;
+    this.currencyAmountTo = (Math.round(this.currencyAmountTo * 100) / 100);
   }
 
-  changeCurrencyAmountReversed() {
-    return this.currencyAmountFrom = this.currencyAmountTo * this._currencyRate;
+  changeCurrencyAmountReversed() : void{
+    this.currencyAmountFrom = this.currencyAmountTo / this._currencyRate;
+    this.currencyAmountFrom = (Math.round(this.currencyAmountFrom * 100) / 100);
   }
   
 
@@ -68,6 +70,7 @@ export class ConvertComponent {
         (response: Currencies) => {
           this._currencyRate = response.rate;
           this.changeCurrencyAmount();
+          this.changeCurrencyAmountReversed();
           console.warn(this._currencyRate);
         },
         (error) => {
